@@ -1,0 +1,2003 @@
+/* ========================================================
+   YUVA Bharat - CGPA Portal (cgpa.yuva.ind.in)
+   Clean Modern Light Design System & Styling
+   ======================================================== */
+
+:root {
+  --font-primary: 'Outfit', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  --font-heading: 'Playfair Display', Georgia, serif;
+
+  /* Color Palette - Crisp Light Modern Aesthetic */
+  --bg-primary: #f8fafc;
+  --bg-secondary: #ffffff;
+  --bg-card: rgba(255, 255, 255, 0.95);
+  --bg-card-hover: rgba(241, 245, 249, 1);
+
+  --text-primary: #0f172a;
+  --text-secondary: #475569;
+  --text-muted: #64748b;
+
+  --accent-orange: #ff9933;
+  --accent-orange-dark: #d97706;
+  --accent-green: #138808;
+  --accent-blue: #2563eb;
+  --accent-purple: #7c3aed;
+  --accent-cyan: #0284c7;
+  --accent-gold: #d97706;
+
+  --border-color: rgba(0, 0, 0, 0.1);
+  --border-active: rgba(255, 153, 51, 0.6);
+
+  --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.06), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  --shadow-glow: 0 0 20px rgba(255, 153, 51, 0.15);
+
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 20px;
+  --radius-full: 9999px;
+
+  --transition-fast: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --transition-normal: 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  width: 100%;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: var(--font-primary);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  line-height: 1.6;
+  background-image:
+    radial-gradient(circle at 10% 20%, rgba(255, 153, 51, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(19, 136, 8, 0.06) 0%, transparent 40%),
+    radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.04) 0%, transparent 60%);
+  background-attachment: fixed;
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+  box-sizing: border-box;
+}
+
+/* Header */
+.app-header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border-bottom: 1px solid var(--border-color);
+  padding: 1rem 0;
+  box-shadow: var(--shadow-sm);
+}
+
+.header-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
+}
+
+.brand-logo {
+  width: 44px;
+  height: 44px;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: var(--shadow-sm);
+  flex-shrink: 0;
+  overflow: hidden;
+  padding: 4px;
+}
+
+.brand-logo img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.brand-text {
+  display: flex;
+  flex-direction: column;
+}
+
+.brand-name {
+  font-weight: 800;
+  font-size: 1.25rem;
+  background: linear-gradient(90deg, #d97706, #0f172a, #15803d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: -0.5px;
+}
+
+.brand-sub {
+  font-size: 0.75rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.header-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Hero Banner */
+.hero {
+  padding: 3rem 0 2rem;
+  text-align: center;
+  width: 100%;
+}
+
+.hero-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.35rem 1rem;
+  background: rgba(255, 153, 51, 0.12);
+  border: 1px solid rgba(255, 153, 51, 0.3);
+  border-radius: var(--radius-full);
+  color: var(--accent-orange-dark);
+  font-size: 0.85rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  max-width: 100%;
+}
+
+.hero-title {
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 800;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+  letter-spacing: -1px;
+  color: var(--text-primary);
+  word-break: break-word;
+}
+
+.hero-title span {
+  background: linear-gradient(135deg, var(--accent-orange-dark), #e67e22);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hero-subtitle {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+  max-width: 680px;
+  margin: 0 auto;
+}
+
+/* Main Grid Layout */
+.app-grid {
+  display: grid;
+  grid-template-columns: 320px 1fr;
+  gap: 2rem;
+  margin-bottom: 4rem;
+  width: 100%;
+}
+
+/* Sidebar: University Selector */
+.sidebar-panel {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.5rem;
+  box-shadow: var(--shadow-lg);
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  height: fit-content;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.panel-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+}
+
+.search-box {
+  position: relative;
+  width: 100%;
+}
+
+.search-box input {
+  width: 100%;
+  padding: 0.75rem 1rem 0.75rem 2.5rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.9rem;
+  transition: border-color var(--transition-fast);
+}
+
+.search-box input:focus {
+  outline: none;
+  border-color: var(--accent-orange);
+  box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.15);
+}
+
+.search-icon {
+  position: absolute;
+  left: 0.85rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.univ-list {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  max-height: 380px;
+  overflow-y: auto;
+  padding-right: 0.25rem;
+  width: 100%;
+}
+
+.univ-list::-webkit-scrollbar {
+  width: 5px;
+}
+
+.univ-list::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: var(--radius-full);
+}
+
+.univ-item {
+  padding: 0.85rem 1rem;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.univ-item:hover {
+  border-color: var(--accent-orange);
+  background: var(--bg-card-hover);
+  transform: translateX(3px);
+}
+
+.univ-item.active {
+  border-color: var(--accent-orange);
+  background: rgba(255, 153, 51, 0.1);
+  box-shadow: 0 0 15px rgba(255, 153, 51, 0.15);
+}
+
+.univ-item-name {
+  font-weight: 700;
+  font-size: 0.95rem;
+  line-height: 1.3;
+  color: var(--text-primary);
+  word-break: break-word;
+}
+
+.univ-item-meta {
+  font-size: 0.75rem;
+  color: var(--text-secondary);
+  margin-top: 0.35rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.univ-tag {
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.2rem 0.5rem;
+  border-radius: var(--radius-sm);
+  font-size: 0.7rem;
+  color: var(--text-muted);
+  max-width: 100%;
+  word-break: break-word;
+  white-space: normal;
+}
+
+/* University Details Card */
+.active-univ-card {
+  background: rgba(255, 153, 51, 0.06);
+  border: 1px dashed var(--accent-orange);
+  border-radius: var(--radius-md);
+  padding: 1rem;
+  font-size: 0.85rem;
+  width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+  word-break: break-word;
+}
+
+.active-univ-card h4 {
+  color: var(--accent-orange-dark);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  word-break: break-word;
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0.5rem;
+  margin-bottom: 0.35rem;
+  color: var(--text-secondary);
+  word-break: break-word;
+}
+
+.info-row span {
+  flex-shrink: 0;
+}
+
+.info-row strong {
+  color: var(--text-primary);
+  text-align: right;
+  word-break: break-word;
+}
+
+/* Main Workspace */
+.workspace-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+}
+
+/* Calculation Mode Tabs */
+.mode-tabs {
+  display: flex;
+  background: var(--bg-card);
+  padding: 0.4rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border-color);
+  gap: 0.4rem;
+  box-shadow: var(--shadow-sm);
+  width: 100%;
+}
+
+.tab-btn {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border: none;
+  background: transparent;
+  color: var(--text-secondary);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.95rem;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+  text-decoration: none;
+}
+
+.tab-btn:hover {
+  color: var(--text-primary);
+}
+
+.tab-btn.active {
+  background: linear-gradient(135deg, var(--accent-orange), #e67e22);
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(255, 153, 51, 0.3);
+}
+
+/* Main Calculator Card */
+.calculator-card {
+  background: var(--bg-card);
+  backdrop-filter: blur(12px);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-lg);
+  padding: 1.75rem;
+  box-shadow: var(--shadow-lg);
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+
+.card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+  width: 100%;
+}
+
+.card-title {
+  font-size: 1.25rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+}
+
+.formula-chip {
+  background: rgba(37, 99, 235, 0.1);
+  color: var(--accent-blue);
+  padding: 0.35rem 0.85rem;
+  border-radius: var(--radius-full);
+  font-size: 0.8rem;
+  font-weight: 600;
+  border: 1px solid rgba(37, 99, 235, 0.25);
+  max-width: 100%;
+  word-break: break-word;
+}
+
+/* Course Rows Table */
+.courses-table-wrapper {
+  overflow-x: auto;
+  overflow-y: visible;
+  margin-bottom: 1.5rem;
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+  border-radius: var(--radius-sm);
+}
+
+.courses-table {
+  width: 100%;
+  min-width: 540px;
+  border-collapse: separate;
+  border-spacing: 0 0.5rem;
+}
+
+.courses-table th {
+  text-align: left;
+  padding: 0.75rem 1rem;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+}
+
+.courses-table td {
+  padding: 0.5rem;
+  background: var(--bg-secondary);
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  position: relative;
+}
+
+.courses-table tr td:first-child {
+  border-left: 1px solid var(--border-color);
+  border-top-left-radius: var(--radius-md);
+  border-bottom-left-radius: var(--radius-md);
+}
+
+.courses-table tr td:last-child {
+  border-right: 1px solid var(--border-color);
+  border-top-right-radius: var(--radius-md);
+  border-bottom-right-radius: var(--radius-md);
+}
+
+.input-control {
+  width: 100%;
+  max-width: 100%;
+  padding: 0.65rem 0.85rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.9rem;
+  box-sizing: border-box;
+}
+
+.input-control:focus {
+  outline: none;
+  border-color: var(--accent-orange);
+  box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.15);
+}
+
+/* CUSTOM DROPDOWN COMPONENT STYLING */
+.custom-dropdown {
+  position: relative;
+  width: 100%;
+  max-width: 100%;
+}
+
+.custom-dropdown-trigger {
+  width: 100%;
+  padding: 0.65rem 0.85rem;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-sm);
+  color: var(--text-primary);
+  font-family: inherit;
+  font-size: 0.9rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  user-select: none;
+  transition: all var(--transition-fast);
+  box-sizing: border-box;
+}
+
+.custom-dropdown-trigger .trigger-label {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  max-width: calc(100% - 20px);
+}
+
+.custom-dropdown-trigger:hover,
+.custom-dropdown.open .custom-dropdown-trigger {
+  border-color: var(--accent-orange);
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(255, 153, 51, 0.15);
+}
+
+.custom-dropdown-trigger .chevron {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  transition: transform var(--transition-fast);
+  margin-left: 0.5rem;
+  flex-shrink: 0;
+}
+
+.custom-dropdown.open .chevron {
+  transform: rotate(180deg);
+  color: var(--accent-orange-dark);
+}
+
+.custom-dropdown-menu {
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background: #ffffff;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  box-shadow: 0 12px 28px -5px rgba(0, 0, 0, 0.15), 0 8px 10px -6px rgba(0, 0, 0, 0.08);
+  max-height: 240px;
+  min-width: 200px;
+  overflow-y: auto;
+  display: none;
+  padding: 0.4rem;
+  flex-direction: column;
+  gap: 0.25rem;
+  box-sizing: border-box;
+}
+
+.custom-dropdown.open .custom-dropdown-menu {
+  display: flex;
+  animation: dropdownSlide 0.2s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes dropdownSlide {
+  from {
+    opacity: 0;
+    transform: translateY(-6px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.custom-dropdown-option {
+  padding: 0.6rem 0.75rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+  font-size: 0.88rem;
+  font-weight: 500;
+  color: var(--text-primary);
+  transition: all var(--transition-fast);
+}
+
+.custom-dropdown-option:hover {
+  background: rgba(255, 153, 51, 0.1);
+  color: var(--accent-orange-dark);
+}
+
+.custom-dropdown-option.selected {
+  background: linear-gradient(135deg, rgba(255, 153, 51, 0.15), rgba(255, 153, 51, 0.08));
+  font-weight: 700;
+  color: var(--accent-orange-dark);
+}
+
+.option-badge {
+  font-size: 0.75rem;
+  background: rgba(0, 0, 0, 0.05);
+  padding: 0.15rem 0.5rem;
+  border-radius: var(--radius-full);
+  color: var(--text-secondary);
+  flex-shrink: 0;
+}
+
+.custom-dropdown-option.selected .option-badge {
+  background: var(--accent-orange-dark);
+  color: #ffffff;
+}
+
+.btn-icon-danger {
+  background: rgba(239, 68, 68, 0.1);
+  color: #dc2626;
+  border: 1px solid rgba(239, 68, 68, 0.25);
+  width: 36px;
+  height: 36px;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+  flex-shrink: 0;
+}
+
+.btn-icon-danger:hover {
+  background: #dc2626;
+  color: #fff;
+}
+
+.table-actions {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  width: 100%;
+}
+
+.btn-secondary {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  color: var(--text-primary);
+  padding: 0.65rem 1.25rem;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-weight: 600;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  transition: all var(--transition-fast);
+}
+
+.btn-secondary:hover {
+  border-color: var(--accent-orange);
+  color: var(--accent-orange-dark);
+  background: rgba(255, 153, 51, 0.05);
+  transform: translateY(-1px);
+  text-decoration: none;
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-orange), #e67e22);
+  border: none;
+  color: #fff;
+  padding: 0.65rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-family: inherit;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-decoration: none;
+  box-shadow: 0 4px 12px rgba(255, 153, 51, 0.3);
+  transition: all var(--transition-fast);
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 153, 51, 0.4);
+  text-decoration: none;
+}
+
+/* Results Display Box */
+.results-box {
+  background: linear-gradient(135deg, #ffffff, #f8fafc);
+  border: 1px solid var(--accent-orange);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 1.25rem;
+  box-shadow: var(--shadow-glow);
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.result-card {
+  text-align: center;
+}
+
+.result-label {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+}
+
+.result-value {
+  font-size: 2.25rem;
+  font-weight: 800;
+  color: var(--accent-orange-dark);
+  line-height: 1;
+}
+
+.result-value.accent-green {
+  color: #15803d;
+}
+
+.result-value.accent-cyan {
+  color: var(--accent-cyan);
+}
+
+.result-sub {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  margin-top: 0.25rem;
+  word-break: break-word;
+}
+
+/* Grading Table Preview */
+.grading-table-preview {
+  margin-top: 1.5rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid var(--border-color);
+  width: 100%;
+}
+
+.preview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+  gap: 0.6rem;
+  margin-top: 0.75rem;
+  width: 100%;
+}
+
+.grade-badge {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 0.75rem;
+  border-radius: var(--radius-sm);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+}
+
+.grade-badge-letter {
+  font-weight: 800;
+  color: var(--accent-orange-dark);
+}
+
+.grade-badge-pts {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+}
+
+/* REDESIGNED MODERN FOOTER STYLING */
+.app-footer {
+  border-top: 1px solid var(--border-color);
+  padding: 4rem 0 2rem;
+  margin-top: 5rem;
+  background: #ffffff;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.app-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent-orange), var(--accent-green), var(--accent-blue));
+}
+
+.footer-top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 2.5rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border-color);
+  width: 100%;
+}
+
+.footer-brand-col {
+  padding-right: 1.5rem;
+}
+
+.footer-desc {
+  font-size: 0.88rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 1.25rem;
+  word-break: break-word;
+}
+
+.footer-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.6rem;
+}
+
+.f-badge {
+  background: rgba(0, 0, 0, 0.04);
+  border: 1px solid var(--border-color);
+  padding: 0.35rem 0.75rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.footer-heading {
+  font-size: 0.95rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.8px;
+  color: var(--text-primary);
+  margin-bottom: 1.25rem;
+  position: relative;
+}
+
+.footer-heading::after {
+  content: '';
+  display: block;
+  width: 24px;
+  height: 2px;
+  background: var(--accent-orange);
+  margin-top: 0.35rem;
+  border-radius: 2px;
+}
+
+.footer-links-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.footer-links-list a {
+  color: var(--text-secondary);
+  text-decoration: none;
+  font-size: 0.88rem;
+  font-weight: 500;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  transition: all var(--transition-fast);
+}
+
+.footer-links-list a:hover {
+  color: var(--accent-orange-dark);
+  transform: translateX(3px);
+}
+
+.footer-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 2rem;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  width: 100%;
+}
+
+.copyright-text strong {
+  color: var(--text-primary);
+}
+
+.footer-bottom-links {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.footer-bottom-links a {
+  color: var(--accent-orange-dark);
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.footer-bottom-links a:hover {
+  text-decoration: underline;
+}
+
+/* Utility Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fade {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+/* ========================================================================
+   YUVA BHARAT — CGPA CALCULATOR PORTAL
+   FULL RESPONSIVE LAYER (replaces/extends the existing
+   "COMPREHENSIVE MOBILE MEDIA QUERIES" block at the bottom of style.css)
+
+   Breakpoints: 1200 → 1024 → 900 → 768 → 600 → 480 → 380
+   Also covers JS-injected markup from app.js:
+     .course-row, .sem-row, .custom-dropdown*, .grade-badge*,
+     #sgpaResult / #cgpaResult / #convertedPercent etc,
+     the inline-styled 2-col grid in the % Converter panel
+   ======================================================================== */
+
+
+/* ---------------------------------------------------------------------
+   GLOBAL TOUCH TARGETS (unchanged behaviour, kept for reference)
+   --------------------------------------------------------------------- */
+@media (pointer: coarse) {
+  * {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .input-control,
+  .custom-dropdown-trigger,
+  .btn-primary,
+  .btn-secondary,
+  .tab-btn,
+  .btn-icon-danger,
+  .univ-item,
+  .custom-dropdown-option {
+    min-height: 44px;
+  }
+}
+
+
+/* ========================================================================
+   1200px — SLIGHTLY NARROWER DESKTOP / LARGE LAPTOP
+   ======================================================================== */
+@media (max-width: 1200px) {
+  .container {
+    padding: 0 1.25rem;
+  }
+
+  .app-grid {
+    grid-template-columns: 280px 1fr;
+    gap: 1.5rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.6rem, 3.6vw, 2.5rem);
+  }
+}
+
+
+/* ========================================================================
+   1024px — TABLET LANDSCAPE / SMALL LAPTOP
+   (stack sidebar above workspace, per existing behaviour)
+   ======================================================================== */
+@media (max-width: 1024px) {
+  .container {
+    padding: 0 1rem;
+  }
+
+  /* ---------- HEADER ---------- */
+  .app-header {
+    padding: 0.85rem 0;
+  }
+
+  .brand-logo {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+
+  .brand-name {
+    font-size: 1.15rem;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    padding: 2.25rem 0 1.5rem;
+  }
+
+  /* ---------- LAYOUT STACK ---------- */
+  .app-grid {
+    grid-template-columns: 1fr !important;
+    gap: 1.5rem !important;
+    width: 100% !important;
+  }
+
+  .sidebar-panel {
+    order: 1 !important;
+    width: 100% !important;
+  }
+
+  .workspace-panel {
+    order: 2 !important;
+    width: 100% !important;
+  }
+
+  .panel-title {
+    font-size: 1.02rem;
+  }
+
+  .univ-list {
+    max-height: 260px;
+  }
+
+  /* ---------- WORKSPACE ---------- */
+  .calculator-card {
+    padding: 1.5rem;
+  }
+
+  .results-box {
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  }
+
+  /* ---------- FOOTER ---------- */
+  .footer-top {
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+  }
+}
+
+
+/* ========================================================================
+   900px — LARGE TABLET / PHABLET
+   ======================================================================== */
+@media (max-width: 900px) {
+
+  /* ---------- HEADER ---------- */
+  .header-content {
+    gap: 0.5rem;
+  }
+
+  .header-actions {
+    gap: 0.5rem;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero-badge {
+    font-size: 0.78rem;
+    padding: 0.32rem 0.85rem;
+  }
+
+  /* ---------- SIDEBAR PANEL ---------- */
+  .sidebar-panel {
+    padding: 1.25rem;
+    gap: 1rem;
+  }
+
+  .search-box input {
+    padding: 0.65rem 1rem 0.65rem 2.35rem;
+    font-size: 0.85rem;
+  }
+
+  .search-icon {
+    left: 0.75rem;
+  }
+
+  /* ---------- MODE TABS ---------- */
+  .mode-tabs {
+    gap: 0.3rem;
+  }
+
+  .tab-btn {
+    font-size: 0.88rem;
+    padding: 0.65rem 0.6rem;
+  }
+
+  /* ---------- COURSES TABLE ---------- */
+  .courses-table th,
+  .courses-table td {
+    padding: 0.6rem 0.75rem;
+  }
+
+  /* ---------- RESULTS ---------- */
+  .result-value {
+    font-size: 2rem;
+  }
+
+  /* ---------- PERCENTAGE CONVERTER (inline-styled JS grid) ---------- */
+  .calculator-card div[style*="grid-template-columns:1fr 1fr"] {
+    gap: 1.25rem !important;
+  }
+
+  /* ---------- GRADING PREVIEW ---------- */
+  .preview-grid {
+    grid-template-columns: repeat(auto-fill, minmax(105px, 1fr));
+  }
+}
+
+
+/* ========================================================================
+   768px — TABLET PORTRAIT / SMALL TABLET
+   ======================================================================== */
+@media (max-width: 768px) {
+
+  /* ---------- HERO ---------- */
+  .hero {
+    padding: 1.5rem 0 1rem;
+  }
+
+  .hero-badge {
+    font-size: 0.75rem;
+    padding: 0.3rem 0.75rem;
+    margin-bottom: 0.75rem;
+  }
+
+  .hero-title {
+    font-size: clamp(1.4rem, 5vw, 2rem);
+    letter-spacing: -0.5px;
+    margin-bottom: 0.65rem;
+    word-break: break-word;
+  }
+
+  .hero-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.45;
+  }
+
+  /* ---------- SIDEBAR PANEL ---------- */
+  .sidebar-panel {
+    padding: 1rem;
+  }
+
+  .panel-title {
+    font-size: 0.98rem;
+    gap: 0.4rem;
+  }
+
+  .univ-item {
+    padding: 0.75rem 0.85rem;
+  }
+
+  .univ-item-name {
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+
+  .univ-item-meta {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.35rem;
+  }
+
+  .univ-tag {
+    white-space: normal;
+    word-break: break-word;
+    font-size: 0.68rem;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .active-univ-card {
+    padding: 0.85rem;
+  }
+
+  .active-univ-card h4 {
+    font-size: 0.9rem;
+    word-break: break-word;
+  }
+
+  .info-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.15rem;
+    word-break: break-word;
+  }
+
+  .info-row strong {
+    word-break: break-word;
+    text-align: left;
+  }
+
+  /* ---------- MODE TABS ---------- */
+  .mode-tabs {
+    padding: 0.25rem;
+    gap: 0.25rem;
+  }
+
+  .tab-btn {
+    padding: 0.55rem 0.45rem;
+    font-size: 0.8rem;
+    gap: 0.3rem;
+  }
+
+  /* ---------- CALCULATOR CARD ---------- */
+  .calculator-card {
+    padding: 1rem;
+    border-radius: var(--radius-md);
+  }
+
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .card-title {
+    font-size: 1.05rem;
+  }
+
+  .formula-chip {
+    font-size: 0.75rem;
+    padding: 0.25rem 0.6rem;
+    max-width: 100%;
+    word-break: break-word;
+  }
+
+  /* ---------- COURSES / SEMESTER TABLE ---------- */
+  .courses-table-wrapper {
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .courses-table th {
+    font-size: 0.7rem;
+  }
+
+  /* ---------- CUSTOM DROPDOWN ---------- */
+  .custom-dropdown-trigger {
+    font-size: 0.85rem;
+    padding: 0.55rem 0.7rem;
+  }
+
+  .custom-dropdown-trigger .trigger-label {
+    max-width: 160px;
+  }
+
+  /* ---------- TABLE ACTIONS ---------- */
+  .table-actions {
+    flex-direction: column;
+    gap: 0.65rem;
+  }
+
+  .table-actions .btn-primary,
+  .table-actions .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+
+  /* ---------- RESULTS ---------- */
+  .results-box {
+    grid-template-columns: 1fr;
+    gap: 0.85rem;
+    padding: 1rem;
+  }
+
+  .result-value {
+    font-size: 1.65rem;
+  }
+
+  /* ---------- PERCENTAGE CONVERTER PANELS ---------- */
+  .calculator-card div[style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 1rem !important;
+  }
+
+  .calculator-card div[style*="padding:1.5rem"] {
+    padding: 1.1rem !important;
+  }
+
+  #convertedPercent,
+  #convertedCGPA {
+    font-size: 1.3rem !important;
+  }
+
+  /* ---------- GRADING PREVIEW ---------- */
+  .grading-table-preview {
+    margin-top: 1.1rem;
+    padding-top: 1.1rem;
+  }
+
+  .preview-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.5rem;
+  }
+
+  .grade-badge {
+    padding: 0.45rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .app-footer {
+    padding: 2.75rem 0 1.5rem;
+    margin-top: 3.5rem;
+  }
+
+  .footer-top {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    padding-bottom: 1.5rem;
+  }
+
+  .footer-brand-col {
+    padding-right: 0;
+  }
+
+  .footer-heading {
+    margin-bottom: 0.9rem;
+  }
+
+  .footer-links-list {
+    gap: 0.55rem;
+  }
+
+  .footer-bottom {
+    flex-direction: column;
+    gap: 0.75rem;
+    text-align: center;
+  }
+}
+
+
+/* ========================================================================
+   600px — LARGE PHONE
+   ======================================================================== */
+@media (max-width: 600px) {
+
+  .container {
+    padding: 0 0.75rem;
+  }
+
+  /* ---------- HEADER ---------- */
+  .app-header {
+    padding: 0.7rem 0;
+  }
+
+  .brand {
+    gap: 0.55rem;
+  }
+
+  .brand-logo {
+    width: 34px;
+    height: 34px;
+    font-size: 0.95rem;
+  }
+
+  .brand-name {
+    font-size: 1rem;
+  }
+
+  .brand-sub {
+    font-size: 0.68rem;
+  }
+
+  .header-actions .btn-secondary {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.78rem;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero-title {
+    letter-spacing: -0.3px;
+  }
+
+  /* ---------- SIDEBAR ---------- */
+  .univ-list {
+    max-height: 220px;
+  }
+
+  /* ---------- MODE TABS: horizontal scroll ---------- */
+  .mode-tabs {
+    flex-wrap: nowrap;
+    overflow-x: visible;
+  }
+
+  .tab-btn {
+    flex: 1;
+    min-width: 0;
+    white-space: normal;
+    padding: 0.5rem 0.3rem;
+    font-size: 0.72rem;
+    gap: 0.25rem;
+  }
+
+  /* ---------- COURSES TABLE ---------- */
+  .courses-table {
+    min-width: 480px;
+  }
+
+  /* ---------- PREVIEW GRID ---------- */
+  .preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+/* ========================================================================
+   480px — STANDARD PHONE
+   ======================================================================== */
+@media (max-width: 480px) {
+
+  .container {
+    padding: 0 0.65rem;
+  }
+
+  /* ---------- HEADER ---------- */
+  .app-header {
+    padding: 0.65rem 0;
+  }
+
+  .brand-logo {
+    width: 32px;
+    height: 32px;
+    font-size: 0.9rem;
+    border-radius: var(--radius-sm);
+  }
+
+  .brand-name {
+    font-size: 0.98rem;
+  }
+
+  .brand-sub {
+    display: none;
+  }
+
+  .header-actions .btn-secondary {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.75rem;
+  }
+
+  .header-actions .btn-secondary i {
+    margin: 0;
+  }
+
+  /* ---------- HERO ---------- */
+  .hero {
+    padding: 1.25rem 0 0.85rem;
+  }
+
+  .hero-badge {
+    font-size: 0.68rem;
+    padding: 0.28rem 0.65rem;
+  }
+
+  .hero-title {
+    font-size: 1.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.82rem;
+  }
+
+  /* ---------- SIDEBAR PANEL ---------- */
+  .sidebar-panel {
+    padding: 0.85rem;
+    gap: 0.85rem;
+    border-radius: var(--radius-md);
+  }
+
+  .panel-title {
+    font-size: 0.9rem;
+  }
+
+  .search-box input {
+    padding: 0.55rem 0.85rem 0.55rem 2.15rem;
+    font-size: 0.8rem;
+  }
+
+  .search-icon {
+    font-size: 0.8rem;
+  }
+
+  .univ-list {
+    max-height: 200px;
+    gap: 0.45rem;
+  }
+
+  .univ-item {
+    padding: 0.65rem 0.7rem;
+  }
+
+  .univ-item-name {
+    font-size: 0.82rem;
+  }
+
+  .active-univ-card {
+    padding: 0.7rem;
+    font-size: 0.78rem;
+  }
+
+  .tab-btn {
+    font-size: 0.65rem;
+    padding: 0.45rem 0.2rem;
+  }
+
+  .tab-btn i {
+    font-size: 0.85em;
+  }
+
+
+  /* ---------- CALCULATOR CARD ---------- */
+  .calculator-card {
+    padding: 0.85rem;
+  }
+
+  .card-title {
+    font-size: 0.95rem;
+  }
+
+  /* ---------- COURSES TABLE WRAPPER ---------- */
+  .courses-table-wrapper {
+    margin-left: 0;
+    margin-right: 0;
+    padding: 0.25rem;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-sm);
+    background: #ffffff;
+    width: 100%;
+    overflow-x: auto;
+  }
+
+  .courses-table {
+    min-width: 440px;
+  }
+
+  .courses-table th,
+  .courses-table td {
+    padding: 0.45rem 0.55rem;
+  }
+
+  .input-control {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.82rem;
+  }
+
+  /* ---------- CUSTOM DROPDOWN ---------- */
+  .custom-dropdown-trigger {
+    padding: 0.45rem 0.55rem;
+    font-size: 0.78rem;
+  }
+
+  .custom-dropdown-trigger .trigger-label {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+  }
+
+  .custom-dropdown-trigger .chevron {
+    font-size: 0.7rem;
+    margin-left: 0.35rem;
+  }
+
+  .custom-dropdown-menu {
+    max-height: 160px;
+    min-width: 160px;
+    padding: 0.3rem;
+  }
+
+  .custom-dropdown-option {
+    padding: 0.5rem 0.6rem;
+    font-size: 0.78rem;
+  }
+
+  .option-badge {
+    font-size: 0.68rem;
+    padding: 0.12rem 0.4rem;
+  }
+
+  .btn-icon-danger {
+    width: 32px;
+    height: 32px;
+  }
+
+  /* ---------- TABLE ACTIONS ---------- */
+  .btn-primary,
+  .btn-secondary {
+    font-size: 0.82rem;
+    padding: 0.55rem 1rem;
+  }
+
+  /* ---------- RESULTS ---------- */
+  .results-box {
+    padding: 0.85rem;
+  }
+
+  .result-label {
+    font-size: 0.7rem;
+  }
+
+  .result-value {
+    font-size: 1.5rem;
+  }
+
+  .result-sub {
+    font-size: 0.72rem;
+  }
+
+  /* ---------- PERCENTAGE CONVERTER ---------- */
+  .calculator-card div[style*="grid-template-columns:1fr 1fr"] {
+    grid-template-columns: 1fr !important;
+    gap: 0.85rem !important;
+  }
+
+  .calculator-card label[style*="font-weight:700"] {
+    font-size: 0.85rem !important;
+  }
+
+  #convertedPercent,
+  #convertedCGPA {
+    font-size: 1.2rem !important;
+  }
+
+  /* ---------- GRADING PREVIEW ---------- */
+  .preview-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem;
+  }
+
+  .grade-badge {
+    padding: 0.35rem 0.45rem;
+    font-size: 0.75rem;
+  }
+
+  .grade-badge-pts {
+    font-size: 0.68rem;
+  }
+
+  /* ---------- FOOTER ---------- */
+  .app-footer {
+    padding: 2.25rem 0 1.25rem;
+    margin-top: 2.5rem;
+  }
+
+  .footer-desc {
+    font-size: 0.82rem;
+  }
+
+  .f-badge {
+    font-size: 0.72rem;
+    padding: 0.3rem 0.6rem;
+  }
+
+  .footer-heading {
+    font-size: 0.88rem;
+  }
+
+  .footer-links-list a {
+    font-size: 0.82rem;
+  }
+
+  .footer-bottom {
+    font-size: 0.78rem;
+  }
+}
+
+
+/* ========================================================================
+   380px — SMALL / COMPACT PHONE
+   ======================================================================== */
+@media (max-width: 380px) {
+
+  .brand-name {
+    font-size: 0.9rem;
+  }
+
+  .hero-title {
+    font-size: 1.3rem;
+  }
+
+  .hero-subtitle {
+    font-size: 0.78rem;
+  }
+
+  .panel-title {
+    font-size: 0.85rem;
+  }
+
+  .tab-btn {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.4rem;
+  }
+
+  .calculator-card {
+    padding: 0.65rem;
+  }
+
+  .card-title {
+    font-size: 0.88rem;
+  }
+
+  .courses-table {
+    min-width: 400px;
+  }
+
+  .custom-dropdown-trigger .trigger-label {
+    max-width: 95px;
+  }
+
+  .result-value {
+    font-size: 1.3rem;
+  }
+
+  .preview-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .footer-badges {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+
+/* ========================================================================
+   LANDSCAPE PHONE — short viewport height, wide layout
+   (keep sidebar+workspace side-by-side a bit longer, shrink hero)
+   ======================================================================== */
+@media (max-width: 900px) and (orientation: landscape) and (max-height: 480px) {
+
+  .hero {
+    padding: 0.85rem 0 0.6rem;
+  }
+
+  .hero-badge {
+    margin-bottom: 0.5rem;
+  }
+
+  .app-grid {
+    grid-template-columns: 260px 1fr !important;
+  }
+
+  .sidebar-panel {
+    order: initial !important;
+  }
+
+  .workspace-panel {
+    order: initial !important;
+  }
+
+  .univ-list {
+    max-height: 160px;
+  }
+}
+
+/* ========================================================================
+   OVERFLOW FIX — CGPA Calculator Page
+   Root cause: CSS Grid/Flexbox children default to min-width: auto, so
+   long unbroken content (formula text, tables, chips) refuses to shrink
+   below its own intrinsic width and pushes past the parent edge — even
+   though html/body has overflow-x:hidden (that only hides the page-level
+   scrollbar, it doesn't stop a child box from visually overflowing).
+
+   Fix: explicitly set min-width: 0 on every grid/flex child in the
+   overflow chain, and add overflow-wrap to any text node that can be
+   arbitrarily long (formulas, notes, university names).
+
+   Append this AFTER everything else in style.css so it wins the cascade.
+   ======================================================================== */
+
+/* ---------- 1. THE GRID CHAIN ITSELF ---------- */
+.app-grid {
+  grid-template-columns: minmax(0, 320px) minmax(0, 1fr);
+}
+
+@media (max-width: 1024px) {
+  .app-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
+  }
+}
+
+.sidebar-panel,
+.workspace-panel {
+  min-width: 0;
+  max-width: 100%;
+}
+
+/* ---------- 2. CARDS & INNER CONTAINERS ---------- */
+.calculator-card,
+.active-univ-card,
+.results-box,
+.result-card,
+.grading-table-preview,
+.univ-item,
+.mode-tabs,
+.card-header {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.card-header {
+  flex-wrap: wrap;
+}
+
+/* ---------- 3. THE FORMULA CHIP (main culprit — long unbroken formula strings) ---------- */
+.formula-chip {
+  min-width: 0;
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  display: inline-block;
+}
+
+/* ---------- 4. UNIVERSITY DETAILS CARD (long notes / regulation text) ---------- */
+.active-univ-card,
+.active-univ-card * {
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+.active-univ-card h4 {
+  max-width: 100%;
+}
+
+/* The JS-injected <p> tag for university notes has no wrap rule at all —
+   this targets it directly since it can carry the longest strings on
+   the whole page ("Official BHU Ordinance §10.2 specifies...") */
+.active-univ-card p {
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+.info-row {
+  min-width: 0;
+  flex-wrap: wrap;
+}
+
+.info-row span,
+.info-row strong {
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* ---------- 5. UNIVERSITY LIST ITEMS ---------- */
+.univ-item-name,
+.univ-item-meta,
+.univ-tag {
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+/* ---------- 6. MODE TABS ROW ---------- */
+.tab-btn {
+  min-width: 0;
+}
+
+/* ---------- 7. TABLES (already have their own scroll wrapper — reinforce) ---------- */
+.courses-table-wrapper {
+  min-width: 0;
+  max-width: 100%;
+  overflow-x: auto;
+}
+
+/* ---------- 8. RESULTS GRID ---------- */
+.result-label,
+.result-value,
+.result-sub {
+  min-width: 0;
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* ---------- 9. GRADING SCALE PREVIEW GRID (the visibly clipped 2nd column) ---------- */
+.preview-grid {
+  min-width: 0;
+  max-width: 100%;
+}
+
+.grade-badge {
+  min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.grade-badge-letter,
+.grade-badge-pts {
+  min-width: 0;
+  overflow-wrap: break-word;
+}
+
+/* ---------- 10. PERCENTAGE CONVERTER PANELS (inline-styled JS grid) ---------- */
+.calculator-card div[style*="grid-template-columns:1fr 1fr"] {
+  min-width: 0;
+}
+
+.calculator-card div[style*="grid-template-columns:1fr 1fr"]>div {
+  min-width: 0;
+  max-width: 100%;
+  overflow-wrap: break-word;
+}
+
+/* ---------- 11. FOOTER (same bug pattern, cheap insurance) ---------- */
+.footer-top,
+.footer-col,
+.footer-brand-col {
+  min-width: 0;
+}
+
+.footer-desc,
+.f-badge {
+  overflow-wrap: break-word;
+  word-break: break-word;
+}
+
+/* ---------- 12. GLOBAL SAFETY NET ---------- */
+/* Any direct child of a flex or grid container that we haven't named
+   above still gets a sane min-width so future additions don't reopen
+   this bug. Scoped to .app-grid, .card-header, .mode-tabs, .results-box,
+   .preview-grid, and .footer-top only — NOT a blanket * rule, which
+   would risk breaking unrelated layouts. */
+.app-grid>*,
+.card-header>*,
+.mode-tabs>*,
+.results-box>*,
+.preview-grid>*,
+.footer-top>* {
+  min-width: 0;
+}

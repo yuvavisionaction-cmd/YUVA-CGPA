@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CGPA Calculator for Top 50 Universities | YUVA Bharat Engine</title>
+    
+    <!-- Meta SEO -->
+    <meta name="description" content="Official CGPA to Percentage and SGPA calculator for top 50 Indian and International Universities including DU, VTU, SPPU, AKTU, BHU, KTU, Oxford, TUM, Harvard, and ETH Zurich under NEP 2020/2022.">
+    <meta name="keywords" content="CGPA calculator, SGPA calculator, percentage converter, NEP 2020 CGPA formula, DU CGPA calculator, VTU percentage formula, SPPU grade calculator">
+    <meta name="author" content="YUVA Bharat Ecosystem">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=Playfair+Display:wght@700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="https://yuva.ind.in/Images/YuvaNewLogo.png" type="image/x-icon">
+
+    <!-- CSS Stylesheet -->
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+
+    <!-- Sticky Navigation Header -->
+    <header class="app-header">
+        <div class="container header-content">
+            <a href="https://yuva.ind.in" class="brand">
+                <div class="brand-logo">
+                    <img src="https://yuva.ind.in/Images/YuvaNewLogo.png" alt="YUVA Bharat Logo">
+                </div>
+                <div class="brand-text">
+                    <span class="brand-name">YUVA Bharat</span>
+                    <span class="brand-sub">CGPA & Academic Engine</span>
+                </div>
+            </a>
+            <div class="header-actions">
+                <a href="https://yuva.ind.in" target="_blank" class="btn-secondary" style="font-size: 0.85rem; padding: 0.5rem 1rem;">
+                    <i class="fa-solid fa-house"></i> YUVA Main Site
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Container -->
+    <main class="container">
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-badge">
+                <i class="fa-solid fa-shield-halved"></i> Verified NEP 2020 / 2022 Regulations Dataset
+            </div>
+            <h1 class="hero-title">
+                CGPA & SGPA Calculator for <span>Top 50 Universities</span>
+            </h1>
+            <p class="hero-subtitle">
+                Accurate, official, and credit-weighted academic grade calculator tailored specifically to Indian & Global University active ordinances.
+            </p>
+        </section>
+
+        <!-- Main Workspace Layout -->
+        <div class="app-grid">
+            <!-- Sidebar: University Selector -->
+            <aside class="sidebar-panel">
+                <div class="panel-title">
+                    <i class="fa-solid fa-university" style="color: var(--accent-orange-dark);"></i> Select University
+                </div>
+
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="univSearch" placeholder="Search university (e.g. VTU, DU, AKTU)...">
+                </div>
+
+                <div class="univ-list" id="univList">
+                    <!-- Dynamic University Item List -->
+                </div>
+
+                <div class="active-univ-card" id="activeUnivDetails">
+                    <!-- Active University Details -->
+                </div>
+            </aside>
+
+            <!-- Main Workspace: Calculator Engine -->
+            <section class="workspace-panel">
+                <!-- Mode Navigation Tabs -->
+                <nav class="mode-tabs">
+                    <button class="tab-btn active" data-mode="sgpa">
+                        <i class="fa-solid fa-calculator"></i> SGPA Calculator
+                    </button>
+                    <button class="tab-btn" data-mode="cgpa">
+                        <i class="fa-solid fa-layer-group"></i> CGPA Cumulative
+                    </button>
+                    <button class="tab-btn" data-mode="percentage">
+                        <i class="fa-solid fa-percent"></i> % Converter
+                    </button>
+                </nav>
+
+                <!-- Workspace Dynamic Container -->
+                <div id="workspaceContainer">
+                    <!-- Rendered by app.js -->
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Redesigned Footer Section -->
+    <footer class="app-footer">
+        <div class="container">
+            <div class="footer-top">
+                <!-- Col 1: Brand & Mission -->
+                <div class="footer-col footer-brand-col">
+                    <div class="brand" style="margin-bottom: 1rem;">
+                        <div class="brand-logo">
+                            <img src="https://yuva.ind.in/Images/YuvaNewLogo.png" alt="YUVA Bharat Logo">
+                        </div>
+                        <div class="brand-text">
+                            <span class="brand-name">YUVA Bharat</span>
+                            <span class="brand-sub">Academic Infrastructure Engine</span>
+                        </div>
+                    </div>
+                    <p class="footer-desc">
+                        Official Academic Infrastructure for calculating SGPA, CGPA & Percentage across 50 top Indian & International Universities under NEP 2020/2022 active ordinances.
+                    </p>
+                    <div class="footer-badges">
+                        <span class="f-badge"><i class="fa-solid fa-circle-check" style="color: #15803d;"></i> 100% Verified Formulas</span>
+                        <span class="f-badge"><i class="fa-solid fa-shield-halved" style="color: var(--accent-orange-dark);"></i> NEP 2020 Aligned</span>
+                    </div>
+                </div>
+
+                <!-- Col 2: Main Website -->
+                <div class="footer-col">
+                    <h5 class="footer-heading">Main Website</h5>
+                    <ul class="footer-links-list">
+                        <li><a href="https://yuva.ind.in" target="_blank" rel="noopener"><i class="fa-solid fa-house"></i> Home Page</a></li>
+                        <li><a href="https://yuva.ind.in/About/about.html" target="_blank" rel="noopener"><i class="fa-solid fa-address-card"></i> About YUVA</a></li>
+                        <li><a href="https://yuva.ind.in/OurVerticals/" target="_blank" rel="noopener"><i class="fa-solid fa-diagram-project"></i> Our Verticals</a></li>
+                        <li><a href="https://yuva.ind.in/Our.Initiative/" target="_blank" rel="noopener"><i class="fa-solid fa-hand-holding-heart"></i> Our Initiatives</a></li>
+                        <li><a href="https://yuva.ind.in/Gallary/photo.html" target="_blank" rel="noopener"><i class="fa-solid fa-images"></i> Photo Gallery</a></li>
+                        <li><a href="https://yuva.ind.in/GetInvolve/" target="_blank" rel="noopener"><i class="fa-solid fa-users"></i> Get Involved</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 3: Calculation Engines -->
+                <div class="footer-col">
+                    <h5 class="footer-heading">Calculation Engines</h5>
+                    <ul class="footer-links-list">
+                        <li><a href="#" onclick="window.cgpaApp.switchMode('sgpa'); return false;"><i class="fa-solid fa-calculator"></i> SGPA Semester Calculator</a></li>
+                        <li><a href="#" onclick="window.cgpaApp.switchMode('cgpa'); return false;"><i class="fa-solid fa-layer-group"></i> Multi-Semester CGPA Aggregator</a></li>
+                        <li><a href="#" onclick="window.cgpaApp.switchMode('percentage'); return false;"><i class="fa-solid fa-percent"></i> Direct CGPA-to-% Converter</a></li>
+                        <li><a href="#" onclick="window.print(); return false;"><i class="fa-solid fa-file-pdf"></i> Print Grade Transcript</a></li>
+                    </ul>
+                </div>
+
+                <!-- Col 4: YUVA Network -->
+                <div class="footer-col">
+                    <h5 class="footer-heading">YUVA Ecosystem</h5>
+                    <ul class="footer-links-list">
+                        <li><a href="https://yuva.ind.in" target="_blank" rel="noopener"><i class="fa-solid fa-globe"></i> YUVA Main Portal</a></li>
+                        <li><a href="https://yuva.ind.in/our%20activity/Subdomains/subdomains.html" target="_blank" rel="noopener"><i class="fa-solid fa-network-wired"></i> Digital Subdomains Network</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Footer Bottom -->
+            <div class="footer-bottom">
+                <div class="copyright-text">
+                    &copy; 2026 <strong>YUVA Bharat Ecosystem</strong>. All rights reserved.
+                </div>
+                <div class="footer-bottom-links">
+                    <span>Powered by YUVA Digital Infrastructure</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Standalone JS App Engine & Data -->
+    <script src="./app.js"></script>
+</body>
+</html>
